@@ -1,0 +1,19 @@
+"use client";
+
+import { createContext, useContext, type ReactNode } from "react";
+import type { Locale } from "@/types";
+import { getMessages, type Messages } from "@/lib/i18n/messages";
+
+const LocaleContext = createContext<Locale>("uz");
+
+export function LocaleProvider({ locale, children }: { locale: Locale; children: ReactNode }) {
+  return <LocaleContext.Provider value={locale}>{children}</LocaleContext.Provider>;
+}
+
+export function useLocale(): Locale {
+  return useContext(LocaleContext);
+}
+
+export function useMessages(): Messages {
+  return getMessages(useContext(LocaleContext));
+}

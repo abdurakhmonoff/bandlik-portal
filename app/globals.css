@@ -1,0 +1,402 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Bandlik Portal — design tokens
+   Architecture follows AlignUI Base (semantic layers over primitive
+   ramps), expressed in the Qiziltepa palette. Documented in
+   docs/design-tokens.md. Components never use raw hex.
+   ------------------------------------------------------------------ */
+
+@theme {
+  /* ---------- Primitive ramps ---------- */
+  /* qizil — Qizilqum brick red (primary) */
+  --color-qizil-50: #fbf1ef;
+  --color-qizil-100: #f6dcd8;
+  --color-qizil-200: #eebab3;
+  --color-qizil-300: #e0908a;
+  --color-qizil-400: #cc6459;
+  --color-qizil-500: #b6432f;
+  --color-qizil-600: #a02d22;
+  --color-qizil-700: #7e1f17;
+  --color-qizil-800: #5e140f;
+  --color-qizil-900: #430d0a;
+  --color-qizil-950: #2b0706;
+
+  /* tepa — deep slate-blue ink (neutrals) */
+  --color-tepa-50: #f4f5f7;
+  --color-tepa-100: #e9ebef;
+  --color-tepa-200: #d5d9e0;
+  --color-tepa-300: #b7bec8;
+  --color-tepa-400: #8a93a2;
+  --color-tepa-500: #67707f;
+  --color-tepa-600: #4e5866;
+  --color-tepa-700: #3a4350;
+  --color-tepa-800: #2a3340;
+  --color-tepa-900: #1b2430;
+  --color-tepa-950: #111821;
+
+  /* qum — warm sand (surface bands only) */
+  --color-qum-50: #fbf9f5;
+  --color-qum-100: #f7f3ec;
+  --color-qum-200: #f2ebe1;
+  --color-qum-300: #e2d6c3;
+  --color-qum-400: #cbb897;
+  --color-qum-500: #b39a6f;
+  --color-qum-600: #937a4f;
+  --color-qum-700: #74603e;
+  --color-qum-800: #574831;
+  --color-qum-900: #3d3324;
+  --color-qum-950: #251f17;
+
+  /* dala — field green (success / active / new) */
+  --color-dala-50: #edf8f5;
+  --color-dala-100: #d3efe7;
+  --color-dala-200: #a9dfd0;
+  --color-dala-300: #6fc6b0;
+  --color-dala-400: #3aa88d;
+  --color-dala-500: #1d8f74;
+  --color-dala-600: #0e7c66;
+  --color-dala-700: #0b6352;
+  --color-dala-800: #0a4d40;
+  --color-dala-900: #083b32;
+  --color-dala-950: #04241f;
+
+  /* oltin — sun gold (featured marker only) */
+  --color-oltin-50: #fdf8ec;
+  --color-oltin-100: #faeccc;
+  --color-oltin-200: #f3d894;
+  --color-oltin-300: #e9bf5c;
+  --color-oltin-400: #dba63a;
+  --color-oltin-500: #c9922a;
+  --color-oltin-600: #a67320;
+  --color-oltin-700: #82571b;
+  --color-oltin-800: #63421a;
+  --color-oltin-900: #4a3216;
+  --color-oltin-950: #2c1c0b;
+
+  /* ---------- Semantic layer (AlignUI naming) ---------- */
+  /* backgrounds */
+  --color-white-0: #ffffff;
+  --color-weak-50: #f4f5f7;
+  --color-soft-200: #e3e6eb;
+  --color-sub-300: #c9cfd8;
+  --color-soft-400: #67707f;
+  --color-sub-600: #4e5866;
+  --color-surface-800: #2a3340;
+  --color-strong-950: #1b2430;
+  --color-disabled-300: #c9cfd8;
+
+  /* sand surfaces (section bands, quiet panels) */
+  --color-sand-base: #f2ebe1;
+  --color-sand-light: #f7f3ec;
+  --color-sand-stroke: #e2d6c3;
+
+  /* primary */
+  --color-primary-base: #a02d22;
+  --color-primary-dark: #7e1f17;
+  --color-primary-darker: #5e140f;
+  --color-primary-alpha-10: color-mix(in srgb, #a02d22 10%, transparent);
+  --color-primary-alpha-16: color-mix(in srgb, #a02d22 16%, transparent);
+  --color-primary-alpha-24: color-mix(in srgb, #a02d22 24%, transparent);
+
+  /* states */
+  --color-success-base: #0e7c66;
+  --color-success-light: #d3efe7;
+  --color-success-lighter: #edf8f5;
+  --color-warning-base: #c9922a;
+  --color-warning-dark: #82571b;
+  --color-warning-light: #faeccc;
+  --color-warning-lighter: #fdf8ec;
+  --color-error-base: #b42318;
+  --color-error-light: #f6dcd8;
+  --color-error-lighter: #fbf1ef;
+  --color-away-base: #c9922a;
+  --color-away-light: #faeccc;
+  --color-away-lighter: #fdf8ec;
+  --color-information-base: #3a4350;
+  --color-information-light: #e9ebef;
+  --color-information-lighter: #f4f5f7;
+  --color-feature-base: #a02d22;
+  --color-feature-light: #f6dcd8;
+  --color-feature-lighter: #fbf1ef;
+
+  /* static */
+  --color-static-black: #111821;
+  --color-static-white: #ffffff;
+
+  /* ---------- Typography ---------- */
+  --font-display: var(--font-display-active);
+  --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
+
+  --text-title-h1: 3.5rem;
+  --text-title-h1--line-height: 1.05;
+  --text-title-h1--letter-spacing: -0.02em;
+  --text-title-h2: 2.75rem;
+  --text-title-h2--line-height: 1.08;
+  --text-title-h2--letter-spacing: -0.02em;
+  --text-title-h3: 2.25rem;
+  --text-title-h3--line-height: 1.12;
+  --text-title-h3--letter-spacing: -0.015em;
+  --text-title-h4: 1.75rem;
+  --text-title-h4--line-height: 1.2;
+  --text-title-h4--letter-spacing: -0.01em;
+  --text-title-h5: 1.375rem;
+  --text-title-h5--line-height: 1.25;
+  --text-title-h6: 1.125rem;
+  --text-title-h6--line-height: 1.35;
+
+  --text-label-xl: 1.5rem;
+  --text-label-xl--line-height: 2rem;
+  --text-label-lg: 1.125rem;
+  --text-label-lg--line-height: 1.5rem;
+  --text-label-md: 1rem;
+  --text-label-md--line-height: 1.5rem;
+  --text-label-sm: 0.875rem;
+  --text-label-sm--line-height: 1.25rem;
+  --text-label-xs: 0.75rem;
+  --text-label-xs--line-height: 1rem;
+
+  --text-paragraph-xl: 1.5rem;
+  --text-paragraph-xl--line-height: 2rem;
+  --text-paragraph-lg: 1.125rem;
+  --text-paragraph-lg--line-height: 1.75rem;
+  --text-paragraph-md: 1rem;
+  --text-paragraph-md--line-height: 1.5rem;
+  --text-paragraph-sm: 0.875rem;
+  --text-paragraph-sm--line-height: 1.25rem;
+  --text-paragraph-xs: 0.75rem;
+  --text-paragraph-xs--line-height: 1rem;
+
+  --text-subheading-md: 1rem;
+  --text-subheading-md--line-height: 1.5rem;
+  --text-subheading-sm: 0.875rem;
+  --text-subheading-sm--line-height: 1.25rem;
+  --text-subheading-xs: 0.75rem;
+  --text-subheading-xs--line-height: 1rem;
+  --text-subheading-2xs: 0.6875rem;
+  --text-subheading-2xs--line-height: 0.75rem;
+
+  /* ---------- Radii (hierarchy: control 8, card 12, panel 16, sheet 20) ---------- */
+  --radius-4: 0.25rem;
+  --radius-6: 0.375rem;
+  --radius-8: 0.5rem;
+  --radius-10: 0.625rem;
+  --radius-12: 0.75rem;
+  --radius-16: 1rem;
+  --radius-20: 1.25rem;
+
+  /* ---------- Shadows ---------- */
+  --shadow-regular-xs: 0 1px 2px 0 rgb(27 36 48 / 0.06);
+  --shadow-regular-sm: 0 2px 4px 0 rgb(27 36 48 / 0.05), 0 1px 2px 0 rgb(27 36 48 / 0.04);
+  --shadow-regular-md: 0 16px 32px -12px rgb(27 36 48 / 0.14), 0 2px 6px 0 rgb(27 36 48 / 0.04);
+  --shadow-button-primary-focus: 0 0 0 1px #a02d22, 0 0 0 4px rgb(160 45 34 / 0.16);
+  --shadow-button-important-focus: 0 0 0 1px #1b2430, 0 0 0 4px rgb(27 36 48 / 0.12);
+  --shadow-button-error-focus: 0 0 0 1px #b42318, 0 0 0 4px rgb(180 35 24 / 0.16);
+  --shadow-toggle-switch: 0 6px 10px 0 rgb(27 36 48 / 0.06), 0 2px 4px 0 rgb(27 36 48 / 0.04);
+  --shadow-custom-xs: 0 0 0 1px rgb(27 36 48 / 0.04), 0 1px 2px 0 rgb(27 36 48 / 0.04);
+
+  /* ---------- Motion ---------- */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 250ms;
+  --duration-moment: 450ms;
+  --duration-moment-long: 600ms;
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---------- Layout ---------- */
+  --container-prose: 42rem;
+  --container-site: 80rem;
+  --breakpoint-xs: 22.5rem;
+}
+
+/* Display face switches to Onest on Russian pages: Bricolage Grotesque has no Cyrillic. */
+:root {
+  --font-display-active: var(--font-bricolage), var(--font-onest), ui-sans-serif, system-ui, sans-serif;
+  --header-h: 4rem;
+}
+html[lang="ru"] {
+  --font-display-active: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-soft-200);
+  }
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
+  }
+  body {
+    background: var(--color-white-0);
+    color: var(--color-strong-950);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv05";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  html[lang="ru"] h1,
+  html[lang="ru"] h2,
+  html[lang="ru"] h3,
+  html[lang="ru"] h4 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-qizil-100);
+    color: var(--color-strong-950);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary-base);
+    outline-offset: 2px;
+    border-radius: var(--radius-4);
+  }
+  button, [role="button"] {
+    cursor: pointer;
+  }
+  button:disabled, [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ---------- Utilities ---------- */
+@utility font-display {
+  font-family: var(--font-display);
+}
+@utility tabular {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+/* Bricolage width axis for big display sizes */
+@utility display-condensed {
+  font-stretch: 80%;
+}
+@utility display-wide {
+  font-stretch: 100%;
+}
+@utility site-container {
+  width: 100%;
+  max-width: var(--container-site);
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) { padding-inline: 1.5rem; }
+  @media (width >= 64rem) { padding-inline: 2rem; }
+}
+@utility prose-width {
+  max-width: var(--container-prose);
+}
+/* focus ring shared by controls */
+@utility focus-ring {
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-button-primary-focus);
+  }
+}
+@utility focus-ring-inset {
+  &:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-primary-base);
+  }
+}
+/* the hill silhouette as a mask — used by section transitions and skeletons */
+@utility hill-mask {
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0 120 L0 104 C240 96 520 72 860 34 C1080 10 1300 4 1440 20 L1440 120 Z' fill='black'/></svg>");
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+@utility skeleton {
+  background: linear-gradient(90deg, var(--color-weak-50) 0%, var(--color-soft-200) 50%, var(--color-weak-50) 100%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  border-radius: var(--radius-6);
+}
+@keyframes skeleton-shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* View transition between a vacancy row and its detail page */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 220ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+@media print {
+  .print-hidden { display: none !important; }
+}
+
+/* accordion keyframes (used by components/ui/accordion.tsx) */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+/* overlay / dialog / sheet keyframes
+   (used by components/ui/dialog.tsx and components/ui/sheet.tsx) */
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes overlay-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes dialog-in {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes dialog-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(0.5rem); }
+}
+@keyframes sheet-in-bottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+@keyframes sheet-out-bottom {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+@keyframes sheet-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes sheet-out-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}

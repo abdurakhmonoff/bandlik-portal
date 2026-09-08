@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="140" viewBox="0 0 200 140" role="img" aria-label="Bandlik Portal">
+  <title>Bandlik Portal — Qiziltepa tumani</title>
+  <rect width="200" height="140" fill="#1B2430"/>
+  <g transform="translate(76 12) scale(1.5)">
+    <path d="M2 25.5C10 24.6 16.4 17.4 24.6 9.6V25.5H2Z" fill="#E0908A"/>
+    <path d="M19.5 14.5L28.5 5.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="2" y="25.5" width="28" height="2.4" rx="1.2" fill="#FFFFFF"/>
+  </g>
+  <text x="100" y="92" text-anchor="middle" font-family="Bricolage Grotesque, Onest, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#FFFFFF">Bandlik <tspan fill="#E0908A" font-weight="500">Portal</tspan></text>
+  <text x="100" y="116" text-anchor="middle" font-family="Onest, system-ui, sans-serif" font-size="13" font-weight="500" letter-spacing="0.2" fill="#B7BEC8">Qiziltepa tumani</text>
+</svg>

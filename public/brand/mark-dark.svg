@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="Bandlik Portal">
+  <title>Bandlik Portal</title>
+  <path d="M2 25.5C10 24.6 16.4 17.4 24.6 9.6V25.5H2Z" fill="#A02D22"/>
+  <path d="M19.5 14.5L28.5 5.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="2" y="25.5" width="28" height="2.4" rx="1.2" fill="#FFFFFF"/>
+</svg>
