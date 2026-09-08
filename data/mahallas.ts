@@ -10,7 +10,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Alisher Navoiy",
       "ru": "Алишер Навоий"
     },
-    "nameCyrl": "Алишер Навоий маҳалласи",
+    "nameCyrl": "Алишер Навоий МФЙ",
     "sourceId": 3023
   },
   {
@@ -19,7 +19,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Arabxona",
       "ru": "Арабхона"
     },
-    "nameCyrl": "Арабхона маҳалласи",
+    "nameCyrl": "Арабхона МФЙ",
     "sourceId": 3024
   },
   {
@@ -28,7 +28,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Ayronchi",
       "ru": "Айрончи"
     },
-    "nameCyrl": "Айрончи маҳалласи",
+    "nameCyrl": "Айрончи МФЙ",
     "sourceId": 3034
   },
   {
@@ -37,7 +37,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Azizobod",
       "ru": "Азизобод"
     },
-    "nameCyrl": "Азизобод маҳалласи",
+    "nameCyrl": "Азизобод МФЙ",
     "sourceId": 3022
   },
   {
@@ -46,7 +46,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Bashir",
       "ru": "Башир"
     },
-    "nameCyrl": "Башир маҳалласи",
+    "nameCyrl": "Башир МФЙ",
     "sourceId": 3011
   },
   {
@@ -55,7 +55,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Bobodoʻgʻi",
       "ru": "Бободўғи"
     },
-    "nameCyrl": "Бободўғи маҳалласи",
+    "nameCyrl": "Бободўғи МФЙ",
     "sourceId": 2997
   },
   {
@@ -64,7 +64,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Boʻlakrabot",
       "ru": "Бўлакработ"
     },
-    "nameCyrl": "Бўлакработ маҳалласи",
+    "nameCyrl": "Бўлакработ МФЙ",
     "sourceId": 3035
   },
   {
@@ -73,7 +73,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Boʻston",
       "ru": "Бўстон"
     },
-    "nameCyrl": "Бўстон маҳалласи",
+    "nameCyrl": "Бўстон МФЙ",
     "sourceId": 3036
   },
   {
@@ -82,7 +82,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Demas",
       "ru": "Демас"
     },
-    "nameCyrl": "Демас маҳалласи",
+    "nameCyrl": "Демас МФЙ",
     "sourceId": 3027
   },
   {
@@ -91,7 +91,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Furqat",
       "ru": "Фурқат"
     },
-    "nameCyrl": "Фурқат маҳалласи",
+    "nameCyrl": "Фурқат МФЙ",
     "sourceId": 3006
   },
   {
@@ -100,7 +100,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Gulbogʻ",
       "ru": "Гулбоғ"
     },
-    "nameCyrl": "Гулбоғ маҳалласи",
+    "nameCyrl": "Гулбоғ МФЙ",
     "sourceId": 3026
   },
   {
@@ -109,7 +109,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Gulzor",
       "ru": "Гулзор"
     },
-    "nameCyrl": "Гулзор маҳалласи",
+    "nameCyrl": "Гулзор МФЙ",
     "sourceId": 2999
   },
   {
@@ -118,7 +118,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Gumbaz",
       "ru": "Гумбаз"
     },
-    "nameCyrl": "Гумбаз маҳалласи",
+    "nameCyrl": "Гумбаз МФЙ",
     "sourceId": 3038
   },
   {
@@ -127,7 +127,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Gʻamxoʻr",
       "ru": "Ғамхўр"
     },
-    "nameCyrl": "Ғамхўр маҳалласи",
+    "nameCyrl": "Ғамхўр МФЙ",
     "sourceId": 2998
   },
   {
@@ -136,7 +136,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Gʻoyibon",
       "ru": "Ғойибон"
     },
-    "nameCyrl": "Ғойибон маҳалласи",
+    "nameCyrl": "Ғойибон МФЙ",
     "sourceId": 3037
   },
   {
@@ -145,7 +145,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Konsurun",
       "ru": "Консурун"
     },
-    "nameCyrl": "Консурун маҳалласи",
+    "nameCyrl": "Консурун МФЙ",
     "sourceId": 3029
   },
   {
@@ -154,16 +154,16 @@ export const mahallas: Mahalla[] = [
       "uz": "Kulolon",
       "ru": "Кулолон"
     },
-    "nameCyrl": "Кулолон маҳалласи",
+    "nameCyrl": "Кулолон МФЙ",
     "sourceId": 3013
   },
   {
-    "id": "kusharta",
+    "id": "kusharti",
     "name": {
-      "uz": "Kusharta",
-      "ru": "Кушарта"
+      "uz": "Kusharti",
+      "ru": "Кушарти"
     },
-    "nameCyrl": "Кушарта маҳалласи",
+    "nameCyrl": "Кушарти МФЙ",
     "sourceId": 3014
   },
   {
@@ -172,7 +172,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Madaniyat",
       "ru": "Маданият"
     },
-    "nameCyrl": "Маданият маҳалласи",
+    "nameCyrl": "Маданият МФЙ",
     "sourceId": 3015
   },
   {
@@ -181,7 +181,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Malikobod",
       "ru": "Маликобод"
     },
-    "nameCyrl": "Маликобод маҳалласи",
+    "nameCyrl": "Маликобод МФЙ",
     "sourceId": 3001
   },
   {
@@ -190,7 +190,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Mustaqillik",
       "ru": "Мустақиллик"
     },
-    "nameCyrl": "Мустақиллик",
+    "nameCyrl": "Мустақиллик МФЙ",
     "sourceId": 11389
   },
   {
@@ -199,43 +199,43 @@ export const mahallas: Mahalla[] = [
       "uz": "Nurafshon",
       "ru": "Нурафшон"
     },
-    "nameCyrl": "Нурафшон",
+    "nameCyrl": "Нурафшон МФЙ",
     "sourceId": 11384
   },
   {
-    "id": "oboddiyor",
+    "id": "obod-diyor",
     "name": {
-      "uz": "Oboddiyor",
-      "ru": "Ободдиёр"
+      "uz": "Obod diyor",
+      "ru": "Обод диёр"
     },
-    "nameCyrl": "Ободдиёр",
+    "nameCyrl": "Обод диёр МФЙ",
     "sourceId": 11387
   },
   {
-    "id": "okmachit",
+    "id": "oq-machit",
     "name": {
-      "uz": "Okmachit",
-      "ru": "Окмачит"
+      "uz": "Oq machit",
+      "ru": "Оқ мачит"
     },
-    "nameCyrl": "Окмачит маҳалласи",
+    "nameCyrl": "Оқ мачит МФЙ",
     "sourceId": 3017
   },
   {
-    "id": "okrabot",
+    "id": "oqrabot",
     "name": {
-      "uz": "Okrabot",
-      "ru": "Окработ"
+      "uz": "Oqrabot",
+      "ru": "Оқработ"
     },
-    "nameCyrl": "Окработ маҳалласи",
+    "nameCyrl": "Оқработ МФЙ",
     "sourceId": 3002
   },
   {
-    "id": "oksoch",
+    "id": "oqsoch",
     "name": {
-      "uz": "Oksoch",
-      "ru": "Оксоч"
+      "uz": "Oqsoch",
+      "ru": "Оқсоч"
     },
-    "nameCyrl": "Оксоч маҳалласи",
+    "nameCyrl": "Оқсоч МФЙ",
     "sourceId": 3041
   },
   {
@@ -244,7 +244,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Oʻrtaqoʻrgʻon",
       "ru": "Ўртақўрғон"
     },
-    "nameCyrl": "Ўртақўрғон маҳалласи",
+    "nameCyrl": "Ўртақўрғон МФЙ",
     "sourceId": 3005
   },
   {
@@ -253,7 +253,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Oʻzbekiston",
       "ru": "Ўзбекистон"
     },
-    "nameCyrl": "Ўзбекистон маҳалласи",
+    "nameCyrl": "Ўзбекистон МФЙ",
     "sourceId": 3031
   },
   {
@@ -262,16 +262,16 @@ export const mahallas: Mahalla[] = [
       "uz": "Paxtaobod",
       "ru": "Пахтаобод"
     },
-    "nameCyrl": "Пахтаобод маҳалласи",
+    "nameCyrl": "Пахтаобод МФЙ",
     "sourceId": 3018
   },
   {
     "id": "qalayi-azizon",
     "name": {
-      "uz": "Qalʻʻayi-Azizon",
-      "ru": "Қалъайи-Азизон"
+      "uz": "Qalʼayi Azizon",
+      "ru": "Қалъайи Азизон"
     },
-    "nameCyrl": "Қалъайи-Азизон маҳалласи",
+    "nameCyrl": "Қалъайи Азизон МФЙ",
     "sourceId": 3000
   },
   {
@@ -280,25 +280,25 @@ export const mahallas: Mahalla[] = [
       "uz": "Saroy",
       "ru": "Сарой"
     },
-    "nameCyrl": "Сарой",
+    "nameCyrl": "Сарой МФЙ",
     "sourceId": 3003
   },
   {
-    "id": "sheyxon",
+    "id": "shayxon",
     "name": {
-      "uz": "Sheyxon",
-      "ru": "Шейхон"
+      "uz": "Shayxon",
+      "ru": "Шайхон"
     },
-    "nameCyrl": "Шейхон маҳалласи",
+    "nameCyrl": "Шайхон МФЙ",
     "sourceId": 3033
   },
   {
-    "id": "sufiyon",
+    "id": "sofiyon",
     "name": {
-      "uz": "Sufiyon",
-      "ru": "Суфиён"
+      "uz": "Soʻfiyon",
+      "ru": "Сўфиён"
     },
-    "nameCyrl": "Суфиён маҳалласи",
+    "nameCyrl": "Сўфиён МФЙ",
     "sourceId": 3042
   },
   {
@@ -307,7 +307,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Tavois",
       "ru": "Тавоис"
     },
-    "nameCyrl": "Тавоис маҳалласи",
+    "nameCyrl": "Тавоис МФЙ",
     "sourceId": 3043
   },
   {
@@ -316,7 +316,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Tojikon",
       "ru": "Тожикон"
     },
-    "nameCyrl": "Тожикон маҳалласи",
+    "nameCyrl": "Тожикон МФЙ",
     "sourceId": 3019
   },
   {
@@ -325,7 +325,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Toshmachit",
       "ru": "Тошмачит"
     },
-    "nameCyrl": "Тошмачит маҳалласи",
+    "nameCyrl": "Тошмачит МФЙ",
     "sourceId": 3020
   },
   {
@@ -334,7 +334,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Uzilishkent",
       "ru": "Узилишкент"
     },
-    "nameCyrl": "Узилишкент маҳалласи",
+    "nameCyrl": "Узилишкент МФЙ",
     "sourceId": 3004
   },
   {
@@ -343,7 +343,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Vangʻozi",
       "ru": "Ванғози"
     },
-    "nameCyrl": "Ванғози маҳалласи",
+    "nameCyrl": "Ванғози МФЙ",
     "sourceId": 3012
   },
   {
@@ -352,7 +352,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Varozun",
       "ru": "Варозун"
     },
-    "nameCyrl": "Варозун",
+    "nameCyrl": "Варозун МФЙ",
     "sourceId": 3025
   },
   {
@@ -361,7 +361,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Xafkoriyon",
       "ru": "Хафкориён"
     },
-    "nameCyrl": "Хафкориён маҳалласи",
+    "nameCyrl": "Хафкориён МФЙ",
     "sourceId": 3021
   },
   {
@@ -370,7 +370,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Xomrabot",
       "ru": "Хомработ"
     },
-    "nameCyrl": "Хомработ маҳалласи",
+    "nameCyrl": "Хомработ МФЙ",
     "sourceId": 3044
   },
   {
@@ -379,7 +379,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Xoʻjaqoʻrgʻon",
       "ru": "Хўжақўрғон"
     },
-    "nameCyrl": "Хўжақўрғон маҳалласи",
+    "nameCyrl": "Хўжақўрғон МФЙ",
     "sourceId": 3007
   },
   {
@@ -388,7 +388,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Xumo",
       "ru": "Хумо"
     },
-    "nameCyrl": "Хумо",
+    "nameCyrl": "Хумо МФЙ",
     "sourceId": 11383
   },
   {
@@ -397,16 +397,16 @@ export const mahallas: Mahalla[] = [
       "uz": "Xusbuddin",
       "ru": "Хусбуддин"
     },
-    "nameCyrl": "Хусбуддин маҳалласи",
+    "nameCyrl": "Хусбуддин МФЙ",
     "sourceId": 3032
   },
   {
-    "id": "yangi-hayot-qfy",
+    "id": "yangi-hayot",
     "name": {
-      "uz": "Yangi-hayot QFY",
-      "ru": "Янги-ҳаёт ҚФЙ"
+      "uz": "Yangi hayot",
+      "ru": "Янги ҳаёт"
     },
-    "nameCyrl": "Янги-ҳаёт ҚФЙ",
+    "nameCyrl": "Янги ҳаёт МФЙ",
     "sourceId": 3009
   },
   {
@@ -415,7 +415,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Yashnaobod",
       "ru": "Яшнаобод"
     },
-    "nameCyrl": "Яшнаобод",
+    "nameCyrl": "Яшнаобод МФЙ",
     "sourceId": 11392
   },
   {
@@ -424,7 +424,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Zarmetan",
       "ru": "Зарметан"
     },
-    "nameCyrl": "Зарметан маҳалласи",
+    "nameCyrl": "Зарметан МФЙ",
     "sourceId": 3028
   },
   {
@@ -433,7 +433,7 @@ export const mahallas: Mahalla[] = [
       "uz": "Ziyokor",
       "ru": "Зиёкор"
     },
-    "nameCyrl": "Зиёкор",
+    "nameCyrl": "Зиёкор МФЙ",
     "sourceId": 11386
   }
 ];

@@ -91,14 +91,35 @@ def clean_uz(s):
     return s
 
 # ---------- mahallas ----------
+# Official spellings (hokimlik MFY list, Sept 2026) where the Oson Ish source differs.
+OFFICIAL = {
+    "Kusharta mahallasi": ("Kusharti", "Кушарти"),
+    "Okmachit mahallasi": ("Oq machit", "Оқ мачит"),
+    "Okrabot mahallasi": ("Oqrabot", "Оқработ"),
+    "Oksoch mahallasi": ("Oqsoch", "Оқсоч"),
+    "Sufiyon mahallasi": ("Soʻfiyon", "Сўфиён"),
+    "Sheyxon mahallasi": ("Shayxon", "Шайхон"),
+    "Qalʻʻayi-Azizon mahallasi": ("Qalʼayi Azizon", "Қалъайи Азизон"),
+    "Yangi-hayot QFY": ("Yangi hayot", "Янги ҳаёт"),
+    "Oboddiyor": ("Obod diyor", "Обод диёр"),
+    "Varozun": ("Varozun", "Варозун"),
+    "Ziyokor": ("Ziyokor", "Зиёкор"),
+    "Mustaqillik": ("Mustaqillik", "Мустақиллик"),
+    "Nurafshon": ("Nurafshon", "Нурафшон"),
+    "Saroy": ("Saroy", "Сарой"),
+    "Xumo": ("Xumo", "Хумо"),
+    "Yashnaobod": ("Yashnaobod", "Яшнаобод"),
+}
 mahallas = []
 mid_by_source = {}
 for m in makh:
     latin = re.sub(r"\s+mahallasi$", "", m["name"]).strip()
     cyr = re.sub(r"\s+маҳалласи$", "", m["name_cyrl"]).strip()
+    if m["name"] in OFFICIAL:
+        latin, cyr = OFFICIAL[m["name"]]
     mid = slugify(latin)
     mid_by_source[m["id"]] = mid
-    mahallas.append({"id": mid, "name": {"uz": latin, "ru": cyr}, "nameCyrl": m["name_cyrl"], "sourceId": m["id"]})
+    mahallas.append({"id": mid, "name": {"uz": latin, "ru": cyr}, "nameCyrl": f"{cyr} МФЙ", "sourceId": m["id"]})
 mahallas.sort(key=lambda x: x["name"]["uz"])
 
 # ---------- organizations ----------
