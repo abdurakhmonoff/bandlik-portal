@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import heroPhoto from "@/public/images/hero-office.jpg";
+import heroPhoto from "@/public/images/hero-work.jpg";
 import { PaperPlaneTilt, Wheelchair, UsersThree, GraduationCap, ShieldCheck } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/types";
 import { isLocale, localePath } from "@/lib/i18n/config";

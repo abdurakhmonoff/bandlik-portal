@@ -57,7 +57,7 @@ No accounts, no server-side storage, no forms that send anything, no analytics, 
 
 ## Data source and credits
 
-Vacancy data: Oson Ish (osonish.uz), the Ministry of Employment platform — credited in the footer and linked from every vacancy. Hero photograph: Unsplash (photo `1497366216548-37526070297c`, Unsplash licence). District photograph on `/tuman` (the district entrance) supplied by the hokimlik.
+Vacancy data: Oson Ish (osonish.uz), the Ministry of Employment platform — credited in the footer and linked from every vacancy. Hero photograph: Unsplash (photo `1541888946425-d81bb19240f5`, construction site, Unsplash licence). District photograph on `/tuman` (the district entrance) supplied by the hokimlik.
 
 ## Notes on deviations from the brief
 
