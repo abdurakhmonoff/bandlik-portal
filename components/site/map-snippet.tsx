@@ -14,7 +14,7 @@ export function MapSnippet({
   mahalla,
   address,
   coords,
-  zoom = 13,
+  zoom = 16,
 }: {
   locale: Locale;
   mahalla: string | null;
@@ -24,7 +24,8 @@ export function MapSnippet({
 }) {
   const m = getMessages(locale);
   const c = coords ?? DISTRICT_CENTER;
-  const span = 0.06 / (zoom / 13);
+  // bbox width halves per zoom level: 16 ≈ 0.6 km across, close enough to see buildings
+  const span = 0.06 * Math.pow(2, 13 - zoom);
   const bbox = [c.lng - span, c.lat - span * 0.55, c.lng + span, c.lat + span * 0.55].map((n) => n.toFixed(5)).join("%2C");
   const embed = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${c.lat}%2C${c.lng}`;
   const full = `https://www.openstreetmap.org/?mlat=${c.lat}&mlon=${c.lng}#map=${zoom}/${c.lat}/${c.lng}`;
