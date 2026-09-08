@@ -122,7 +122,7 @@ export function Panel({
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={reduce ? { opacity: 0, transition: { duration: 0 } } : { opacity: 0, scale: 0.12, y: 24, transition: { duration: 0.2, ease: "easeIn" } }}
       transition={spring.panel}
-      style={{ transformOrigin: isMobile ? "50% 100%" : "calc(100% - 28px) calc(100% - 28px)" }}
+      style={{ transformOrigin: isMobile ? "50% 100%" : "calc(100% - 28px) calc(100% - 92px)" }}
       drag={isMobile && !reduce ? "y" : false}
       dragConstraints={{ top: 0, bottom: 0 }}
       dragElastic={{ top: 0, bottom: 0.4 }}

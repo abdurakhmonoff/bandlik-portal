@@ -38,7 +38,7 @@ export const Launcher = forwardRef<
     <div
       className={cn(
         "fixed z-50 flex items-center gap-3 print-hidden transition-opacity duration-200 ease-out",
-        "right-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] sm:right-6 sm:bottom-6",
+        "right-4 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] sm:right-6 sm:bottom-[5.5rem]",
         hidden && "pointer-events-none opacity-0",
       )}
       aria-hidden={hidden || undefined}

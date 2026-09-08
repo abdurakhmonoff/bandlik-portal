@@ -26,7 +26,7 @@ export function Bubbles({
   if (reduce) return null;
   return (
     <div
-      className="fixed z-50 flex flex-col items-end gap-2 print-hidden right-4 bottom-[calc(1rem+env(safe-area-inset-bottom)+68px)] sm:right-6 sm:bottom-[calc(1.5rem+72px)]"
+      className="fixed z-50 flex flex-col items-end gap-2 print-hidden right-4 bottom-[calc(5.5rem+env(safe-area-inset-bottom)+68px)] sm:right-6 sm:bottom-[calc(5.5rem+72px)]"
       aria-live="polite"
     >
       <AnimatePresence>
