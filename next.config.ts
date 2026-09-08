@@ -8,7 +8,7 @@ import type { NextConfig } from "next";
  *   /uz/…        → redirected to /… so there is one canonical URL per page
  */
 const RESERVED =
-  "ru|uz|_next|api|brand|images|favicon\\.ico|icon\\.svg|icon\\.png|apple-icon\\.png|sitemap\\.xml|robots\\.txt|manifest\\.webmanifest|opengraph-image";
+  "ru|uz|admin|_next|api|brand|images|favicon\\.ico|icon\\.svg|icon\\.png|apple-icon\\.png|sitemap\\.xml|robots\\.txt|manifest\\.webmanifest|opengraph-image";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
