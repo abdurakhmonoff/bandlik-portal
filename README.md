@@ -49,7 +49,7 @@ To plug in a model later, replace the body of `answer()` (or branch on an API ke
 
 ## Admin panel
 
-`/admin` is a read-only dashboard over the same seed data: KPI tiles, animated charts (publications per day, salary distribution, sectors, mahallas, employers, employment type, experience) and a quality-control table of the latest listings. It has no backend. The gate is a hard-coded login checked in the browser (`lib/admin/auth.ts`: `admin` / `Qiziltepa2026`), kept in `sessionStorage` — it keeps casual visitors out, it is not security. Replace it with real authentication before the panel controls anything. The route is excluded from `robots.txt`.
+`/admin` is a read-only dashboard over the same seed data: KPI tiles, animated charts (publications per day, salary distribution, sectors, mahallas, employers, employment type, experience) and a quality-control table of the latest listings; `/admin/vakansiyalar` shows every listing in a compact grid with search and filters and an edit sheet (the form is complete, saving is not wired to storage yet — edits live only on the page). It has no backend. The gate is a hard-coded login checked in the browser (`lib/admin/auth.ts`: `admin` / `Qiziltepa2026`), kept in `sessionStorage` — it keeps casual visitors out, it is not security. Replace it with real authentication before the panel controls anything. The route is excluded from `robots.txt`.
 
 ## What is deliberately not here
 

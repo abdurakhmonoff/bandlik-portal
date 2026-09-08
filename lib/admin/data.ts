@@ -1,5 +1,6 @@
-import { getAll, getOrganizationById, getMahalla, getSectors, getStats, getOrganizationsWithCounts } from "@/lib/vacancies";
+import { getAll, getOrganizationById, getMahalla, getMahallas, getOrganizations, getSectors, getStats, getOrganizationsWithCounts } from "@/lib/vacancies";
 import { employmentLabels, experienceLabels } from "@/lib/i18n/messages";
+import type { EducationLevel, EmploymentType, ExperienceLevel, SectorId, WorkMode } from "@/types";
 
 export interface Point {
   label: string;
@@ -150,5 +151,78 @@ export function buildAdminData(): AdminData {
     byExperience: count((v) => v.experience, experienceLabels.uz),
     topEmployers,
     latest,
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/* Jobs grid                                                           */
+/* ------------------------------------------------------------------ */
+
+export interface AdminJob {
+  id: string;
+  slug: string;
+  titleUz: string;
+  titleRu: string;
+  organizationId: string;
+  organization: string;
+  sectorId: SectorId;
+  mahallaId: string | null;
+  salaryMin: number | null;
+  salaryMax: number | null;
+  salaryNegotiable: boolean;
+  employmentType: EmploymentType;
+  workMode: WorkMode;
+  experience: ExperienceLevel;
+  educationLevel: EducationLevel;
+  openings: number;
+  phone: string | null;
+  telegram: string | null;
+  contactPerson: string | null;
+  description: string;
+  isFeatured: boolean;
+  publishedAt: string;
+  sourceUrl: string;
+}
+
+export interface AdminJobsData {
+  jobs: AdminJob[];
+  sectors: { id: SectorId; label: string }[];
+  mahallas: { id: string; label: string }[];
+  organizations: { id: string; label: string }[];
+}
+
+export function buildAdminJobs(): AdminJobsData {
+  const jobs: AdminJob[] = [...getAll()]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    .map((v) => ({
+      id: v.id,
+      slug: v.slug,
+      titleUz: v.title.uz,
+      titleRu: v.title.ru,
+      organizationId: v.organizationId,
+      organization: getOrganizationById(v.organizationId)?.name.uz ?? "",
+      sectorId: v.sectorId,
+      mahallaId: v.mahallaId,
+      salaryMin: v.salaryMin,
+      salaryMax: v.salaryMax,
+      salaryNegotiable: v.salaryNegotiable,
+      employmentType: v.employmentType,
+      workMode: v.workMode,
+      experience: v.experience,
+      educationLevel: v.educationLevel,
+      openings: v.openings,
+      phone: v.phone,
+      telegram: v.telegram,
+      contactPerson: v.contactPerson,
+      description: v.description?.uz ?? "",
+      isFeatured: v.isFeatured,
+      publishedAt: v.publishedAt,
+      sourceUrl: v.sourceUrl,
+    }));
+  return {
+    jobs,
+    sectors: getSectors().map((s) => ({ id: s.id, label: s.shortName.uz })),
+    mahallas: getMahallas().map((m) => ({ id: m.id, label: m.name.uz })),
+    organizations: getOrganizations().map((o) => ({ id: o.id, label: o.name.uz })),
   };
 }

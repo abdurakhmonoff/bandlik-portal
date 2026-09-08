@@ -3,11 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
-import { SignOut, ArrowSquareOut, Star, Phone, TextAlignLeft, MapPin, Buildings, Briefcase, CurrencyCircleDollar, Sparkle } from "@phosphor-icons/react";
+import { ArrowSquareOut, Star, Phone, TextAlignLeft, MapPin, Buildings, Briefcase, CurrencyCircleDollar, Sparkle } from "@phosphor-icons/react";
 import type { AdminData } from "@/lib/admin/data";
-import { signOut } from "@/lib/admin/auth";
 import { AnimatedCounter } from "@/components/rare/animated-counter";
-import { Mark, Wordmark } from "@/components/site/logo";
+import { AdminShell } from "@/components/admin/shell";
 import { AreaLine, BarsH, BarsV, ChartCard, Segments } from "@/components/admin/charts";
 import { cn } from "@/lib/utils";
 import { formatDate } from "@/lib/format";
@@ -46,37 +45,7 @@ export function Dashboard({ data }: { data: AdminData }) {
   const pct = (n: number) => `${Math.round((n / k.openVacancies) * 100)}%`;
 
   return (
-    <div className="min-h-dvh bg-sand-light">
-      <header className="sticky top-0 z-30 border-b border-soft-200 bg-white-0/95 backdrop-blur">
-        <div className="site-container flex h-14 items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-2 focus-ring rounded-6" aria-label="Saytga qaytish">
-              <Mark size={26} />
-              <Wordmark size="sm" />
-            </Link>
-            <span aria-hidden="true" className="h-5 w-px bg-soft-200" />
-            <span className="text-label-sm font-medium text-sub-600">Boshqaruv paneli</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Link href="/" className="hidden h-9 items-center rounded-8 px-3 text-label-sm font-medium text-sub-600 hover:bg-weak-50 hover:text-strong-950 focus-ring sm:inline-flex">
-              Saytni koʻrish
-            </Link>
-            <button
-              type="button"
-              onClick={() => {
-                signOut();
-                window.location.reload();
-              }}
-              className="inline-flex h-9 items-center gap-1.5 rounded-8 border border-soft-200 px-3 text-label-sm font-medium text-strong-950 hover:bg-weak-50 focus-ring"
-            >
-              <SignOut size={16} aria-hidden="true" />
-              Chiqish
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <main className="site-container py-8">
+    <AdminShell>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h1 className="text-title-h4 sm:text-title-h3">Umumiy koʻrsatkichlar</h1>
@@ -183,7 +152,6 @@ export function Dashboard({ data }: { data: AdminData }) {
         <p className="mt-8 text-label-xs text-soft-400">
           Panel faqat oʻqish uchun: maʼlumotlar saytning oʻzidan hisoblanadi, hech narsa saqlanmaydi. Kirish parolining oʻzi himoya emas — ishga tushirishdan oldin haqiqiy autentifikatsiya kerak.
         </p>
-      </main>
-    </div>
+    </AdminShell>
   );
 }
