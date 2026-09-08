@@ -73,7 +73,7 @@ export default async function DistrictPage({ params }: { params: Params }) {
 
       {/* the one non-user-triggered reveal on this page */}
       <section className="site-container pt-16 sm:pt-20" aria-label={d.photoCaption}>
-        <DistrictReveal src="/images/qiziltepa-landscape.jpg" alt={d.photoCaption} caption={`${d.photoCaption} — ${locale === "ru" ? "иллюстрация" : "illyustratsiya"}`} />
+        <DistrictReveal src="/images/qiziltepa.jpg" alt={locale === "ru" ? "Въездная стела Кызылтепинского района" : "Qiziltepa tumaniga kirish stelasi"} caption={d.photoCaption} />
       </section>
 
       {/* economy */}

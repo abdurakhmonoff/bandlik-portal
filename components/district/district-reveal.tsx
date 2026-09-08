@@ -40,11 +40,11 @@ export function DistrictReveal({ src, alt, caption }: { src: string; alt: string
 
   return (
     <figure ref={ref} className="overflow-hidden rounded-20 bg-sand-base ring-1 ring-sand-stroke">
-      <div className="relative aspect-[16/10] w-full">
+      <div className="relative aspect-[16/9] w-full">
         {done ? (
           <Image src={src} alt={alt} fill sizes="(min-width: 1280px) 1216px, 100vw" className="object-cover" priority={false} />
         ) : start ? (
-          <GridReveal src={src} alt={alt} aspect={16 / 10} estimatedDuration={4200} onRevealComplete={() => setDone(true)} className="size-full" />
+          <GridReveal src={src} alt={alt} aspect={16 / 9} estimatedDuration={4200} onRevealComplete={() => setDone(true)} className="size-full" />
         ) : (
           <div aria-hidden="true" className="size-full bg-sand-base" />
         )}
